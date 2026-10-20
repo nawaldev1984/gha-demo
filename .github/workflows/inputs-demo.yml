@@ -6,6 +6,7 @@ on:
         description: choose the enviroment to deploy
         required: true
         default: dev
+        type: choice
         options:
           - dev
           - test
