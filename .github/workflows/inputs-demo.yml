@@ -1,0 +1,16 @@
+name: Input Demo
+on: 
+  workflow_dispatch:
+    inputs:
+      enviroment:
+        description: choose the enviroment to deploy
+        required: true
+        default: dev
+jobs:
+  inputs-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the App
+        run: echo "Deploying the application to ${{inputs.enviroment }}
+  
+  
