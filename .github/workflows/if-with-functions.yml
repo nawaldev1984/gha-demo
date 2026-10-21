@@ -25,3 +25,19 @@ jobs:
         steps:
             - name: deploy to production
               run: echo "Deploying to production environment"
+
+    success_notification:
+        needs: ["quality_check", "dev_deploy", "prod_deploy"]
+        if: always() && !failure()
+        runs-on: ubuntu-latest
+        steps:
+            - name: Notify Job Success
+              run: echo "Job Success email sent to the team"
+
+    Failure_notification:
+        needs: ["quality_check", "dev_deploy", "prod_deploy"]
+        if: failure()
+        runs-on: ubuntu-latest
+        steps:
+            - name: Notify Job Failure
+              run: echo "Job Failure email sent to the team"
