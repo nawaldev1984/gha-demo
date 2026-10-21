@@ -19,5 +19,5 @@ jobs:
     if: github.event_name == 'push' && github.ref_name == 'main'
     steps:
       - name: Deploy step
-        run: echo "deploy the app
+        run: echo "deploy the app"
      
