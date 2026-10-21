@@ -6,4 +6,4 @@ jobs:
     steps:
       - name: Run for Dev or nawaldev1984
         if: github.actor == 'dev' || github.actor == 'nawaldev1984'
-        run: echo "Its triggered by either dev or nawaldev1984
+        run: echo "Its triggered by either dev or nawaldev1984"
